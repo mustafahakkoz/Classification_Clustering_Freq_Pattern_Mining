@@ -33,7 +33,7 @@
 - There's no **inertia** (Sum of squared distances of samples to their closest cluster center) attribute of **AgglomerativeClustering** class so we used **silhouette coefficient** (best:1, worst:-1) to select cluster number of **AGNES**. Again 3D t-SNE clusters and **dendogram** is plotted.  
   
   <img title="" src="https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/images/cluster2.png" alt="" height="300">
-  <img title="" src="https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/images/cluster3.png" alt="" height="300">
+  <img title="" src="https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/images/cluster3.png" alt="" height="250">
 
 - **DBSCAN** model is also implemented and best values for the parameters **eps** and **min_samples** are found in gridsearch manner with **silhouette coefficient**. Again best model is visaulized in 3D t-SNE **plot.ly** graphs.  
   
