@@ -2,7 +2,7 @@
 
 2019-2020 Fall CSE4063 - Data Mining
 
-3 projects covering **Classification**, **Clıustering Analysis** and **Frequent Pattern Mining** in the scope of Data Mining lectures in Marmara University. Notebooks are written on Kaggle platform so online versions of them are suggested for better visuals.
+3 projects covering **Classification**, **Clustering Analysis** and **Frequent Pattern Mining** in the scope of Data Mining lectures in Marmara University. Notebooks are written on Kaggle platform so online versions of them are suggested for better visuals.
 
 ---
 
