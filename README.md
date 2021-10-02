@@ -18,26 +18,26 @@
 
 #### Repo Content and Implementation Steps:
 
-[**1.phishing-websites.ipynb**](https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/phishing-websites.ipynb)
+[**1.phishing-websites.ipynb**](https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/1.phishing-websites.ipynb)
 
 - 6 classifiers; **CART**, **C4.5**, **Naive-Bayes**, **Support Vector Machine**, **Neural Network with 1 hidden layer** and **Neural Network with 2 hidden layers** are trained on [Phishing Websites](http://archive.ics.uci.edu/ml/datasets/Phishing+Websites) dataset. Hyperparameter tuning is implemented in 5-fold cross-validation with necesarry preprocessing steps.
 
-[**2.absenteeism-at-work-clustering.ipynb**](https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/absenteeism-at-work-clustering.ipynb)
+[**2.absenteeism-at-work-clustering.ipynb**](https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/2.absenteeism-at-work-clustering.ipynb)
 
 - Clustering Analysis on [Absenteeism at Work Dataset](https://archive.ics.uci.edu/ml/datasets/Absenteeism+at+work) is implemented. First EDA, outlier detection (IQR), normalization (Min-Max Scaler) and feature selection with Random Forest (and Permutation Importance) are completed.
 
 - **K-means** clusters are visaulized by 3D t-SNE plots after searching for possible elbow points (based on **inertia** attribute). After that **PCA+K-means** pipeline is tested. Most of valuable information about data is lost with PCA so, resulting graphs seem incomplete. Using k-means on original 7-dimensional data then plotting with t-SNE gives better results.   
   
-  <img title="" src="https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/images/cluster1.png" alt="" height="200">
+  <img title="" src="https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/images/cluster1.png" alt="" height="300">
 
 - There's no **inertia** (Sum of squared distances of samples to their closest cluster center) attribute of **AgglomerativeClustering** class so we used **silhouette coefficient** (best:1, worst:-1) to select cluster number of **AGNES**. Again 3D t-SNE clusters and **dendogram** is plotted.  
   
-  <img title="" src="https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/images/cluster2.png" alt="" height="200">
-  <img title="" src="https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/images/cluster3.png" alt="" height="200">
+  <img title="" src="https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/images/cluster2.png" alt="" height="300">
+  <img title="" src="https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/images/cluster3.png" alt="" height="300">
 
 - **DBSCAN** model is also implemented and best values for the parameters **eps** and **min_samples** are found in gridsearch manner with **silhouette coefficient**. Again best model is visaulized in 3D t-SNE **plot.ly** graphs.  
   
-  <img title="" src="https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/images/cluster4.png" alt="" height="200">
+  <img title="" src="https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/images/cluster4.png" alt="" height="300">
 
 - And finally in evaluation step, best of 3 models are compared by using 9 metrics:
   
@@ -53,6 +53,6 @@
   
   Explanations and comments on the results can be found in notebooks.
 
-[**3.frequent-pattern-miningv2.ipynb**](https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/frequent-pattern-miningv2.ipynb)
+[**3.frequent-pattern-miningv2.ipynb**](https://github.com/mustafahakkoz/Classification_Clustering_Freq_Pattern_Mining/blob/main/3.frequent-pattern-miningv2.ipynb)
 
 - Association rules for a given dataset is extracted by using **Aprori**, **FP-Growth** and **ECLAT** algorithms of **mlxtend** library after preprocessing with **TransactionEncoder**. Models are compared with memory usages and runtimes.
